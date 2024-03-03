@@ -163,7 +163,7 @@ proc/get_radio_key_from_channel(var/channel)
 		else
 			message = copytext(message,3)
 
-	message = trim_left(message)
+	message = sanitize(message)
 
 	//parse the language code and consume it
 	if(!speaking)
@@ -189,7 +189,7 @@ proc/get_radio_key_from_channel(var/channel)
 		else
 			verb = say_quote(message, speaking)
 
-	message = trim_left(message)
+	message = sanitize(message)
 
 	message = handle_autohiss(message, speaking)
 
@@ -210,7 +210,7 @@ proc/get_radio_key_from_channel(var/channel)
 	var/sound/speech_sound = handle_v[1]
 	var/sound_vol = handle_v[2]
 
-	var/italics = 0
+	var/italics = 1
 	var/message_range = world.view
 
 	if(whispering)
