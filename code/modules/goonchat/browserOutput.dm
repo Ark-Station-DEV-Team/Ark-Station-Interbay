@@ -301,4 +301,10 @@ GLOBAL_DATUM_INIT(iconCache, /savefile, new("tmp/iconCache.sav")) //Cache of ico
 		return
 	SSchat.queue(target, message, handle_whitespace)
 
+/proc/intonation(text)
+    if(copytext_char(text,-1) == "!")
+        text = "<b>[text]</b>"
+    return text
+
+
 #undef MAX_COOKIE_LENGTH
