@@ -163,7 +163,7 @@ proc/get_radio_key_from_channel(var/channel)
 		else
 			message = copytext(message,3)
 
-	message = sanitize(message)
+	message = trim_left(message)
 
 	//parse the language code and consume it
 	if(!speaking)
@@ -189,7 +189,7 @@ proc/get_radio_key_from_channel(var/channel)
 		else
 			verb = say_quote(message, speaking)
 
-	message = sanitize(message)
+	message = trim_left(message)
 
 	message = handle_autohiss(message, speaking)
 
