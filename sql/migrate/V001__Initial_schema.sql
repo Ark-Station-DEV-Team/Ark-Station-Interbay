@@ -32,7 +32,7 @@ CREATE TABLE IF NOT EXISTS `erro_admin` (
   `rank` varchar(32) NOT NULL DEFAULT 'Administrator',
   `level` int(2) NOT NULL DEFAULT '0',
   `flags` int(16) NOT NULL DEFAULT '0'
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -46,7 +46,7 @@ CREATE TABLE IF NOT EXISTS `erro_admin_log` (
   `adminckey` varchar(32) NOT NULL,
   `adminip` varchar(18) NOT NULL,
   `log` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -78,7 +78,7 @@ CREATE TABLE IF NOT EXISTS `erro_ban` (
   `unbanned_ckey` varchar(32) DEFAULT NULL,
   `unbanned_computerid` varchar(32) DEFAULT NULL,
   `unbanned_ip` varchar(32) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -109,7 +109,7 @@ CREATE TABLE IF NOT EXISTS `erro_player` (
   `ip` varchar(18) NOT NULL,
   `computerid` varchar(32) NOT NULL,
   `lastadminrank` varchar(32) NOT NULL DEFAULT 'Player'
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -127,7 +127,7 @@ CREATE TABLE IF NOT EXISTS `erro_poll_option` (
   `descmin` varchar(32) DEFAULT NULL,
   `descmid` varchar(32) DEFAULT NULL,
   `descmax` varchar(32) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -142,7 +142,7 @@ CREATE TABLE IF NOT EXISTS `erro_poll_question` (
   `endtime` datetime NOT NULL,
   `question` varchar(255) NOT NULL,
   `adminonly` tinyint(1) DEFAULT '0'
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -158,7 +158,7 @@ CREATE TABLE IF NOT EXISTS `erro_poll_textreply` (
   `ip` varchar(18) NOT NULL,
   `replytext` text NOT NULL,
   `adminrank` varchar(32) NOT NULL DEFAULT 'Player'
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -175,7 +175,7 @@ CREATE TABLE IF NOT EXISTS `erro_poll_vote` (
   `ip` varchar(16) NOT NULL,
   `adminrank` varchar(32) NOT NULL,
   `rating` int(2) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -188,7 +188,7 @@ CREATE TABLE IF NOT EXISTS `erro_privacy` (
   `datetime` datetime NOT NULL,
   `ckey` varchar(32) NOT NULL,
   `option` varchar(128) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -238,7 +238,7 @@ CREATE TABLE IF NOT EXISTS `whitelist` (
   `id` int(11) NOT NULL,
   `ckey` text NOT NULL,
   `race` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Indexes for dumped tables
